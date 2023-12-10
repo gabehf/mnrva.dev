@@ -22,7 +22,7 @@ const presentation: Presentation = {
      *API development*. When I'm not working, I play guitar and am an avid gamer.",
   socials: [
     {
-      label: "View my GitHub 🡕",
+      label: "View my GitHub",
       link: "https://github.com/gabehf",
     },
   ],
