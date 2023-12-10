@@ -5,9 +5,6 @@ description: "Learn how to deploy your first AWS Lambda serverless function usin
 slug: "creating-serverless-lambda-go"
 isPublish: true
 ---
-
-Creating Serverless Applications with AWS Lambda and Go
----
 In recent years, serverless computing has become a popular choice for building scalable, flexible, and cost-effective applications. Using serverless solutions, you can focus on writing and deploying code, without having to worry about managing infrastructure. AWS Lambda, Amazon's serverless computing platform, provides a simple and efficient way to run code in response to events, without having to provision or manage servers. In this blog post, I'll take a look at how to build serverless applications using AWS Lambda and the Go programming language. I'll cover the basics of serverless computing, setting up an AWS Lambda function, and writing Go code to handle events and respond to requests. By the end of this post, you'll have a good understanding of how to build and deploy serverless applications using AWS Lambda and Go. Let's get started.
 
 ## What is Serverless?

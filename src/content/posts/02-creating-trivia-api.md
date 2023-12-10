@@ -6,8 +6,6 @@ slug: "stateless-containerized-trivia-api-go"
 isPublish: true
 ---
 
-Building a Stateless, Containerized Trivia API in Golang
----
 While working on a much larger project, I decided it would be a good idea to make something smaller that could show off how much I have improved my development strategies and back end knowledge since the days of my first full stack project, Massflip. Today, I will be walking you through my process of creating a trivia API that will allow people to get random trivia questions and then check their answers for correctness. Since this is supposed to be a stateless system, there should be no writing to a database when getting trivia questions or verifying answers. In fact, we won't have any database at all, other than however we choose to store our trivia questions (for this project, our questions will be stored in a json file that gets loaded into memory, but you could modify it to use an SQL database or similar).
 
 Now since I don't really know anything about trivia terminology, let's go over the terms I have decided to use when referring to our objects.
@@ -710,7 +708,7 @@ func (s *Server) GetGuess(e echo.Context) error {
 And let's run our tests to make sure the OK path is working.
 
 ```bash
-$ go test ./...                                                                                                       1:57:33 AM
+$ go test ./...
 ok      github.com/gabehf/trivia-tmp/server     0.004s
 ok      github.com/gabehf/trivia-tmp/trivia     (cached)
 ```
@@ -825,7 +823,7 @@ func TestGuessHandler(t *testing.T) {
 Running `go test ./...` now will show us just how many errors can go unnoticed without proper error handling and enforcement of fail behavior in our API.
 
 ```bash
-$ go test ./...                                                                                                       1:58:38 AM
+$ go test ./...
 --- FAIL: TestGuessHandler (0.00s)
     get_guess_test.go:78: expected nil error, got unhandled error
     get_guess_test.go:81: expected status 400 Bad Request, got 200
@@ -949,7 +947,7 @@ func (s *Server) GetGuess(e echo.Context) error {
 And verify that our tests are passing.
 
 ```bash
-$ go test ./...                                                                                                       2:08:00 AM
+$ go test ./...
 ok      github.com/gabehf/trivia-tmp/server     0.006s
 ok      github.com/gabehf/trivia-tmp/trivia     (cached)
 ```

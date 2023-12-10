@@ -6,8 +6,14 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
 <header class="z-40 flex w-full flex-col gap-2 md:flex-row md:justify-between">
-  <a href={`mailto:${presentation.mail}`} class="hover:text-neutral-100"
+  <!-- <a href={`mailto:${presentation.mail}`} class="hover:text-neutral-100"
     >{presentation.mail}</a
+  > -->
+  <a
+    href="/"
+    class:list={{
+      ["hover:text-neutral-100"]: true,
+    }}>mnrva.dev</a
   >
 
   <nav role="navigation">
